@@ -22,6 +22,3 @@ Explore the live site here:
 
 ## ⚡ Quick Preview
 > Designed as a launchpad for social media marketers, creative agencies, or startup founders looking to quickly showcase services and book consultations.
-
-## 📄 License
-This project is for demonstration purposes only.
