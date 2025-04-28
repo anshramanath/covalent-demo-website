@@ -577,4 +577,8 @@ body {
   .glow, .cta-glow {
     display: none;
   }
+
+  .hero {
+    padding-bottom: 100px; /* or 80px if you want a smaller gap */
+  }
 }
