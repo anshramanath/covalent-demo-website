@@ -562,8 +562,21 @@ body {
   .navbar {
     display: none;
   }
-  
+
   .cursor-dot {
     display: none;
+  }
+
+  .newsletter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newsletter input {
+    width: 100%;
+  }
+
+  .newsletter button {
+    width: 100%;
   }
 }
