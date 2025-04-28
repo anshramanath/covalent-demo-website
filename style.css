@@ -1,0 +1,554 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Neon Cursor Dot */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background: #ff7b00;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: top 0.1s ease, left 0.1s ease;
+  z-index: 9999;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 12px 30px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  z-index: 1000;
+}
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.logo-img {
+  width: 30px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.nav-links li a:hover {
+  color: #ff7b00; /* Neon orange (or any color you want) */
+  transition: color 0.3s ease;
+}
+.btn.small {
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+
+/* Style the link inside the button to look like the button */
+.btn-link {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  padding-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.hero h1 {
+  font-size: 4rem;
+}
+.hero h1 em {
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+.hero p {
+  color: gray;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+.btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+.btn.red {
+  background-color: #ff4d4d;
+  color: white;
+}
+.btn.white {
+  background-color: white;
+  color: black;
+}
+.btn.blue {
+  background-color: #5c3dff;
+  color: white;
+}
+.glow {
+  width: 500px;
+  height: 300px;
+  background: radial-gradient(circle, #ff4d4d, #ffb347, transparent);
+  position: absolute;
+  bottom: 50px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Logos Section */
+/* .logos-section {
+  text-align: center;
+  margin-top: 80px;
+  padding: 50px 20px;
+}
+.logos-carousel {
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+}
+.logos-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  width: max-content;
+}
+.logos-track img {
+  height: 50px;
+  margin: 0 40px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.8);
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+.logos-track img:hover {
+  opacity: 1;
+}
+@keyframes scroll {
+  0% { transform: translateX(0) }
+  100% { transform: translateX(-50%) }
+}
+.logos-carousel::before,
+.logos-carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.logos-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, black 60%, transparent);
+}
+.logos-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, black 60%, transparent);
+} */
+
+/* Call to Action */
+.call-to-action {
+  padding: 100px 50px;
+  text-align: center;
+}
+.call-to-action h2 {
+  font-size: 2.5rem;
+}
+.call-to-action p {
+  margin: 20px 0;
+  color: gray;
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  padding: 100px 20px;
+}
+.services h2 {
+  font-size: 3rem;
+}
+.services h2 em {
+  font-style: italic;
+}
+.services-subtitle {
+  margin-top: 10px;
+  color: gray;
+}
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+.service-card {
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: #121212;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+.service-card h3 {
+  font-size: 1.8rem;
+}
+.service-card p {
+  margin-top: 15px;
+  color: #ccc;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  background: radial-gradient(circle at top left, rgba(90, 100, 255, 0.2), transparent);
+  z-index: 0;
+}
+
+/* Clients Section */
+/* .clients-section {
+  text-align: center;
+  padding: 100px 20px;
+}
+.clients-carousel {
+  overflow: hidden;
+  margin-top: 30px;
+  position: relative;
+}
+.clients-track {
+  display: flex;
+  animation: scrollClients 20s linear infinite;
+  width: max-content;
+}
+.client-card {
+  position: relative;
+  flex: 0 0 300px;
+  height: 400px;
+  background: #111;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.client-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.overlay-text h3 {
+  font-size: 1.5rem;
+}
+.overlay-text p {
+  font-size: 1rem;
+  color: #ccc;
+}
+@keyframes scrollClients {
+  0% { transform: translateX(0) }
+  100% { transform: translateX(-50%) }
+}
+.clients-carousel::before,
+.clients-carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.clients-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, black 60%, transparent);
+}
+.clients-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, black 60%, transparent);
+} */
+
+/* Comparison Section */
+.comparison-section {
+  text-align: center;
+  padding: 100px 20px;
+}
+.comparison-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.comparison-card {
+  flex: 1 1 300px;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #121212;
+  text-align: left;
+}
+.comparison-list {
+  list-style: none;
+  margin-top: 20px;
+}
+.comparison-list li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* Process Section */
+.process-section {
+  padding: 100px 20px;
+  text-align: center;
+}
+.step-img {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.step-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.steps-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.steps-grid {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.step {
+  max-width: 300px;
+  text-align: center;
+}
+.step h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+.step p {
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 1rem;
+}
+.floating img {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-10px) }
+}
+
+/* Final CTA */
+.final-cta {
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+.cta-box {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 25px;
+  padding: 60px 40px;
+  max-width: 700px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.cta-box h2 {
+  font-size: 2.8rem;
+}
+.cta-box h2 em {
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+.cta-box p {
+  margin-top: 20px;
+  color: gray;
+  font-size: 1.1rem;
+}
+.cta-box .btn {
+  margin-top: 30px;
+}
+.cta-glow {
+  position: absolute;
+  bottom: 0;
+  width: 700px;
+  height: 300px;
+  background: radial-gradient(circle, #5c3dff, #ff4d4d, transparent);
+  filter: blur(150px);
+  opacity: 0.6;
+  z-index: 1;
+  transform: translateY(50%);
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 100px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-item {
+  border: 1px solid #333;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background: #111;
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 20px;
+  transition: max-height 0.6s ease, opacity 0.4s ease, padding 0.6s ease;
+}
+.faq-item.active .faq-answer {
+  max-height: 500px; /* or a safe high value */
+  opacity: 1;
+  padding: 20px;
+}
+.faq-item.active .faq-question span {
+  transform: rotate(45deg);
+}
+
+/* Footer */
+.footer {
+  background: black;
+  padding: 80px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 1px solid #222;
+}
+.footer-left {
+  max-width: 500px;
+}
+.footer-logo {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.footer-logo em {
+  font-style: italic;
+}
+.newsletter {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+.newsletter input {
+  background: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+  width: 250px;
+}
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+.link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.link-group h4 {
+  margin-bottom: 10px;
+}
+.link-group a {
+  color: gray;
+  text-decoration: none;
+}
+.link-group a:hover {
+  color: white;
+}
+
+/* Section Badges */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 14px;
+  border-radius: 9999px; /* FULLY rounded */
+  color: white;
+  font-weight: 500;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  user-select: none;
+}
