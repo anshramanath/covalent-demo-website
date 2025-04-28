@@ -552,3 +552,14 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   user-select: none;
 }
+
+/* Hide navbar and cursor-dot on mobile devices */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  
+  .cursor-dot {
+    display: none;
+  }
+}
