@@ -498,6 +498,9 @@ body {
   justify-content: space-between;
   border-top: 1px solid #222;
 }
+.footer-signup {
+  margin-bottom: 30px;
+}
 .footer-left {
   max-width: 500px;
 }
