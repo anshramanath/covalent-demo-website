@@ -568,15 +568,6 @@ body {
   }
 
   .newsletter {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .newsletter input {
-    width: 100%;
-  }
-
-  .newsletter button {
-    width: 100%;
+    display: none;
   }
 }
