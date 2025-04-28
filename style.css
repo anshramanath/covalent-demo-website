@@ -573,4 +573,8 @@ body {
   .newsletter {
     display: none;
   }
+
+  .glow, .cta-glow {
+    display: none;
+  }
 }
