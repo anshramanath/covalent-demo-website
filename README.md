@@ -2,7 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A modern, smooth, and responsive **marketing website demo** built for a fictional social media marketing agency named **Covalent**.  
+A modern, smooth, and responsive **marketing website demo** built for a fictional social media marketing agency named **Covalent**.
+
 Explore the live site here:  
 ➡️ [https://anshramanath.github.io/covalent-demo-website/](https://anshramanath.github.io/covalent-demo-website/)
 
