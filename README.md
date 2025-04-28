@@ -8,7 +8,7 @@ Explore the live site here:
 ➡️ [https://anshramanath.github.io/covalent-demo-website/](https://anshramanath.github.io/covalent-demo-website/)
 
 ## ✨ Features
-- Fully responsive design (desktop + mobile ready)
+- Fully responsive design
 - Custom neon cursor effect
 - Smooth scroll behavior for navigation
 - FAQ accordion animations
