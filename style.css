@@ -353,7 +353,7 @@ body {
 
 /* Process Section */
 .process-section {
-  padding: 100px 20px;
+  padding: 90px 20px;
   text-align: center;
 }
 .step-img {
@@ -450,7 +450,7 @@ body {
 
 /* FAQ Section */
 .faq-section {
-  padding: 100px 20px;
+  padding: 90px 20px;
   max-width: 800px;
   margin: 0 auto;
 }
