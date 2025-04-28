@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -13,7 +18,6 @@ body {
   font-family: 'Inter', sans-serif;
   background: black;
   color: white;
-  overflow-x: hidden;
   line-height: 1.6;
 }
 
